@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Lesson1</title>
+    <style>
+      div{
+        width: 150px;
+        height: 150px;
+        background-color: blue;
+        text-align: center;
+      }
+      #redTxt{
+        color: red;
+      }
+    </style>
+</head> 
+<body>
+    <div id="app">
+      <span v-bind:id="vueClass">{{message}}</span>
+    </div>
+
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script>
+        
+      const app = Vue.createApp({
+        data() {
+          return {
+            message: 'Hello World!',
+            vueClass: 'redTxt'
+          }
+        }
+      })
+    
+     app.mount('#app')
+    
+    </script>
+</body>
+</html>
